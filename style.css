@@ -1,0 +1,191 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(rgba(0, 0, 0, 0.788), rgba(17, 17, 17, 0.796)), url(images/background.avif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    height: 100vh;
+}
+
+/* -------------------Dice-Style----------------------------------------------------------------
+.> */
+
+#Owner{
+    background-color: yellow;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-contaner{
+    border: 1px solid slategray;
+    background-color: white;
+    border-radius: 30px;
+    width: 16%;
+    height: 188px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    gap: 2px;
+    justify-content: center;
+    align-items: center;
+    animation: roll 0.5s ease;
+}
+
+@keyframes roll {
+    0% { transform: rotate(0) scale(0.8); opacity: 0.5; }
+    50% { transform: rotate(180deg) scale(1.1); opacity: 1; }
+    100% { transform: rotate(360deg) scale(1); }
+}
+
+.main-contaner div{
+    /* border: 1px solid red; */
+    height: 28.9%;
+    width: 28.6%;
+
+}
+
+.spacial{
+    background-color: black;
+    border-radius: 60px;
+}
+
+button{
+    font-size: 20px ;
+}
+
+
+/* -------------------------------------------Dice -----Style -----End------------------------------------> */
+
+
+/* ----header ----------------------------------------------- */
+
+.header{
+    /* border: 1px solid black; */
+    text-align: center;
+    height: auto;
+    padding-top: 20px;
+}
+
+.main{
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+input{
+    margin-left: 20px;
+    width: 300px;
+    height: 50px;
+    margin-top: 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    padding-left: 10px;
+    box-shadow: 2px 2px 4px 2px rgba(192, 192, 192, 0.724);
+    border: none;
+}
+button {
+    padding: 10px 20px;
+    background: gold;
+    border: none;
+    color: #111;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 160px;
+}
+
+button:hover {
+    background: orange;
+    box-shadow: 0 0 15px orange;
+}
+
+.showDice, #showDice{
+    /* border:  1px solid red; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    animation: roll 0.5s ease;
+}
+
+
+#h1{
+    color: orange;
+    font-size: 36px;
+    text-shadow: 0 0 15px orange;
+}
+
+#para{
+    font-size: 23px;
+
+}
+
+
+/* --------------------Media-------All-------screen--------------responsive-------------------------------> */
+
+
+
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .main-contaner {
+        min-width: 35vw;
+        min-height: 35vw;
+    }
+    #h1 {
+        font-size: 2.8rem;
+    }
+}
+
+/* Large Phones */
+@media (max-width: 768px) {
+    .main-contaner {
+        min-width: 40vw;
+        min-height: 40vw;
+    }
+    input {
+        height: 45px;
+        font-size: 0.95rem;
+    }
+    button {
+        font-size: 0.95rem;
+    }
+    #h1 {
+        font-size: 2.8rem;
+    }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+    .main-contaner {
+       min-width: 50vw;
+       min-height: 50vw;
+    }
+    input {
+        width: 95%;
+        font-size: 0.9rem;
+    }
+    button {
+        width: 100%;
+        max-width: 180px;
+        font-size: 0.9rem;
+    }
+    #h1 {
+        font-size: 2.3rem;
+    }
+    #para {
+        font-size: 1rem;
+    }
+}
+
+
